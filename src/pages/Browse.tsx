@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 export default function Browse() {
   return (
     <>
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       {/* Start Navbar */}
       <nav className="bg-white position:fixed">
         <div className="flex items-center justify-between w-full max-w-[1130px] py-[22px] mx-auto">
