@@ -1,8 +1,8 @@
 export function BookOffice() {
   return (
     <div>
-      <h1>Details</h1>
-      <p>Welcome to the Details page!</p>
+      <h1>Browse</h1>
+      <p>Welcome to the Browse page!</p>
     </div>
   );
 }
