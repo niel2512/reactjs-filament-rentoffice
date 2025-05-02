@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { City } from "../types/type";
 import OfficeCard from "../components/OfficeCard";
 
@@ -38,6 +38,8 @@ export default function CityDetails() {
     return <p>Category not found</p>;
   }
 
+  const baseURL = "http://rentoffice.test/storage/";
+
   return (
     <>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -49,7 +51,7 @@ export default function CityDetails() {
           </a>
           <ul className="flex items-center gap-[50px] w-fit">
             <li>
-              <a href="">Browse</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
               <a href="">Popular</a>
@@ -82,7 +84,7 @@ export default function CityDetails() {
             <p className="text-lg leading-8 text-[#000929]">Kantor yang tepat dapat memberikan impact pekerjaan menjadi lebih baik dan sehat dalam tumbuhkan karir.</p>
           </div>
           <div id="Hero-Image" className="absolute right-0 w-[calc(100%-((100%-1130px)/2)-305px)] h-[434px] rounded-bl-[40px] overflow-hidden">
-            <img src="/assets/images/thumbnails/thumbnail-details-4.png" className="w-full h-full object-cover" alt="hero background" />
+            <img src={`${baseURL}/${city.photo}`} className="w-full h-full object-cover" alt="hero background" />
           </div>
         </section>
       </header>
