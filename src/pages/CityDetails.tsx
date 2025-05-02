@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { City } from "../types/type";
 import OfficeCard from "../components/OfficeCard";
+import Navbar from "../components/Navbar";
 
 export default function CityDetails() {
   const { slug } = useParams<{ slug: string }>(); //mengambil parameter yang sedang dikunjungi cth: kantor-1
@@ -44,34 +45,7 @@ export default function CityDetails() {
     <>
       <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       {/* start navbar */}
-      <nav className="bg-white">
-        <div className="flex items-center justify-between w-full max-w-[1130px] py-[22px] mx-auto">
-          <a href="index.html">
-            <img src="/assets/images/logos/logo.svg" alt="logo" />
-          </a>
-          <ul className="flex items-center gap-[50px] w-fit">
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <a href="">Popular</a>
-            </li>
-            <li>
-              <a href="">Categories</a>
-            </li>
-            <li>
-              <a href="">Events</a>
-            </li>
-            <li>
-              <a href="view-booking-details.html">My Booking</a>
-            </li>
-          </ul>
-          <a href="#" className="flex items-center gap-[10px] rounded-full border border-[#000929] py-3 px-5">
-            <img src="/assets/images/icons/call.svg" className="w-6 h-6" alt="icon" />
-            <span className="font-semibold">Contact Us</span>
-          </a>
-        </div>
-      </nav>
+      <Navbar />
       {/* end navbar */}
 
       {/* start header */}
@@ -95,7 +69,9 @@ export default function CityDetails() {
         <h2 className="font-bold text-[32px] leading-[48px] text-nowrap">Browse Offices</h2>
         <div className="grid grid-cols-3 gap-[30px]">
           {city.officeSpaces.map((office) => (
-            <OfficeCard key={office.id} office={office}></OfficeCard>
+            <Link key={office.id} to={`/office/${office.slug}`}>
+              <OfficeCard key={office.id} office={office}></OfficeCard>
+            </Link>
           ))}
         </div>
       </section>

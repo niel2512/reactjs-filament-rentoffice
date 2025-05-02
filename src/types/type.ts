@@ -3,6 +3,7 @@ export interface Office {
   price: number;
   duration: number;
   name: string;
+  address: string;
   slug: string;
   city: City; //disini gapake [] 1 office hanya memiliki 1 data city
   thumbnail: string;
