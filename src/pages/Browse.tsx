@@ -1,6 +1,5 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import CityCard from "../components/CityCard";
-import OfficeCard from "../components/OfficeCard";
+import { BrowseCityWrapper } from "../wrappers/BrowseCityWrapper";
+import { BrowseOfficeWrapper } from "../wrappers/BrowseOfficeWrapper";
 
 export default function Browse() {
   return (
@@ -93,27 +92,7 @@ export default function Browse() {
       {/* End Header */}
 
       {/* Start Section City */}
-      <section id="Cities" className="flex flex-col gap-[30px] mt-[100px]">
-        <div className="w-full max-w-[1130px] mx-auto flex items-center justify-between">
-          <h2 className="font-bold text-[32px] leading-[48px] text-nowrap">
-            You Can Choose <br />
-            Our Favorite Cities
-          </h2>
-          <a href="#" className="rounded-full rounded-full py-3 px-5 bg-white font-bold">
-            {" "}
-            Explore All City{" "}
-          </a>
-        </div>
-        <div className="swiper w-full">
-          <div className="swiper-wrapper">
-            <Swiper direction="horizontal" spaceBetween={30} slidesPerView="auto" slidesOffsetAfter={30} slidesOffsetBefore={30}>
-              <SwiperSlide className="!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
-                <CityCard></CityCard>
-              </SwiperSlide>
-            </Swiper>
-          </div>
-        </div>
-      </section>
+      <BrowseCityWrapper></BrowseCityWrapper>
       {/* End Section City */}
 
       {/* Start Section Benefits */}
@@ -181,18 +160,9 @@ export default function Browse() {
       </section>
       {/* End Section Benefits */}
 
-      {/* Start Section Fresh Space */}
-      <section id="Fresh-Space" className="flex flex-col gap-[30px] w-full max-w-[1130px] mx-auto mt-[100px] mb-[120px]">
-        <h2 className="font-bold text-[32px] leading-[48px] text-nowrap text-center">
-          Browse Our Fresh Space.
-          <br />
-          For Your Better Productivity.
-        </h2>
-        <div className="grid grid-cols-3 gap-[30px]">
-          <OfficeCard></OfficeCard>
-        </div>
-      </section>
-      {/* End Section Fresh Space */}
+      {/* Start Section Office */}
+      <BrowseOfficeWrapper></BrowseOfficeWrapper>
+      {/* End Section Office */}
     </>
   );
 }
