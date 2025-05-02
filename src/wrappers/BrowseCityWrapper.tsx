@@ -13,7 +13,7 @@ export function BrowseCityWrapper() {
     axios
       .get("http://rentoffice.test/api/cities", {
         headers: {
-          "X-API-KEY": "qwddnssma2h43nn992kk1fvvj81",
+          "X-API-KEY": "qwertiop123774848880sh",
         },
       })
       .then((response) => {
@@ -50,7 +50,7 @@ export function BrowseCityWrapper() {
           <Swiper direction="horizontal" spaceBetween={30} slidesPerView="auto" slidesOffsetAfter={30} slidesOffsetBefore={30}>
             {cities.map((city) => (
               <SwiperSlide key={city.id} className="!w-fit first-of-type:pl-[calc((100%-1130px-60px)/2)] last-of-type:pr-[calc((100%-1130px-60px)/2)]">
-                <CityCard></CityCard>
+                <CityCard city={city}></CityCard>
               </SwiperSlide>
             ))}
           </Swiper>
