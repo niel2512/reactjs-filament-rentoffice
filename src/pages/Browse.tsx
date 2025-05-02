@@ -8,7 +8,7 @@ export default function Browse() {
       <nav className="bg-white position:fixed">
         <div className="flex items-center justify-between w-full max-w-[1130px] py-[22px] mx-auto">
           <a href="index.html">
-            <img src="/assets/images/logos/logo.svg" alt="logo" />
+            <img src="/assets/images/logos/rent1.svg" alt="logo" />
           </a>
           <ul className="flex items-center gap-[50px] w-fit">
             <li>
