@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 export default function Navbar() {
   return (
     <nav className="bg-white">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
       <div className="flex items-center justify-between w-full max-w-[1130px] py-[22px] mx-auto">
         <Link to="/">
           <img src="/assets/images/logos/logo.svg" alt="logo" />
