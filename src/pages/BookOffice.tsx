@@ -15,6 +15,7 @@ export function BookOffice() {
   const navigate = useNavigate();
 
   const [formData, setFormData] = useState({
+    // Data dibawah ini adalah data yang akan dikirim ke API sehingga harus sama dengan request/StoreBookingTransactionRequest di php
     name: "",
     phone_number: "",
     started_at: "",
@@ -278,7 +279,7 @@ export function BookOffice() {
             </div>
             <div className="relative rounded-xl p-[10px_20px] gap-[10px] bg-[#000929] text-white">
               <img src="/assets/images/icons/Polygon 1.svg" className="absolute -top-[15px] right-[10px] " alt="" />
-              <p className="font-semibold text-sm leading-[24px] z-10">Tolong perhatikan kode unik berikut ketika melakukan pembayaran kantor</p>
+              <p className="font-semibold text-sm leading-[24px] z-10">Harap perhatikan kode unik berikut ketika melakukan pembayaran kantor</p>
             </div>
           </div>
           <hr className="border-[#F6F5FD]" />
@@ -310,7 +311,7 @@ export function BookOffice() {
             </div>
           </div>
           <hr className="border-[#F6F5FD]" />
-          // Menambahkan fitur button disabled apabila sedang loading mengirimkan data
+          {/* Menambahkan fitur button disabled apabila sedang loading mengirimkan data */}
           <button type="submit" disabled={isLoading} className="flex items-center justify-center w-full rounded-full p-[16px_26px] gap-3 bg-[#0D903A] font-bold text-[#F7F7FD]">
             <span>{isLoading ? "Loading..." : "I've Already Paid"}</span>
           </button>
