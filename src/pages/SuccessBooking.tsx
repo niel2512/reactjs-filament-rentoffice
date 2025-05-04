@@ -1,8 +1,3 @@
 export function SuccessBooking() {
-  return (
-    <div>
-      <h1>Details</h1>
-      <p>Welcome to the Details page!</p>
-    </div>
-  );
+  return <p>Sucess Booking Page</p>;
 }

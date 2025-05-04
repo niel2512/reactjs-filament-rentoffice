@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 import { Office } from "../types/type";
 import axios from "axios";
 import { z } from "zod"; //npm install zod
-import { CheckBooking } from "./CheckBooking";
 import { BookingSchema } from "../types/validationBooking";
 
 export function BookOffice() {
@@ -148,7 +147,8 @@ export function BookOffice() {
         <div className="absolute w-full h-full bg-[linear-gradient(180deg,_rgba(0,0,0,0)_0%,#000000_91.83%)] z-10" />
         <img src="/assets/images/thumbnails/thumbnail-details-4.png" className="absolute w-full h-full object-cover object-top" alt="" />
       </div>
-      <form action="booking-finished.html" className="relative flex justify-center max-w-[1130px] mx-auto gap-[30px] mb-20 z-20">
+      {/* Menambahkan onSubmit */}
+      <form onSubmit={handleSubmit} className="relative flex justify-center max-w-[1130px] mx-auto gap-[30px] mb-20 z-20">
         <div className="flex flex-col shrink-0 w-[500px] h-fit rounded-[20px] border border-[#E0DEF7] p-[30px] gap-[30px] bg-white">
           <div className="flex items-center gap-4">
             <div className="flex shrink-0 w-[140px] h-[100px] rounded-[20px] overflow-hidden">
